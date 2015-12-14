@@ -594,7 +594,7 @@
 (defn safe-parse [value format]
   (try
     (st/parse value format)
-    (catch Exception z (.getMessage z))))
+    (catch Exception z (println "cannot parse pour " value format) (.getMessage z))))
 
 (defn round-trip-formatter [value format]
   (let [formatted (st/format value format)
@@ -608,4 +608,5 @@
   (let [value (st/datetime 2014 1 2 12 34 56 789)]
     (doseq [format (keys simple-time.core/formatters)]
       (let [[expected parsed] (round-trip-formatter value format)]
+        ;(println [expected parsed])
         (is (= expected parsed) (str "Formatter " format))))))
