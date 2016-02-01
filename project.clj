@@ -3,7 +3,7 @@
   :url "https://github.com/mbossenbroek/simple-time"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.8.0-RC3"]
+  :dependencies [[org.clojure/clojure "1.8.0"]
                  [joda-time "2.9.1"]]
   :plugins [[codox "0.6.6"]]
   :codox {:include [simple-time.core]
