@@ -7,6 +7,7 @@
 
 (set! *warn-on-reflection* true)
 
+;; OBA ---------> update version clojure vers 1.8.0 et version de joda-time vers 2.9.1
 ;; ****************************************************************************
 
 (defrecord ^:no-doc ^:private SimpleDateTime [^LocalDateTime datetime]
